@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1e1e1e;
+    margin: 0;
+    font-family: 'Quantico', Courier, monospace;
+}
+.doto {
+  font-family: "Doto", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
+}
+.calculator {
+    background: #FFF;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0;
+    position: relative;
+
+}
+.calculator .simple 
+{
+    width:300px;
+    height: 400px;
+}
+
+.rgb-strip {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    transform: translateZ(0);
+}
+
+.rgb-strip.top {
+    top: 0;
+    left: 0;
+}
+
+.rgb-strip.right {
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+}
+
+.rgb-strip.bottom {
+    bottom: 0;
+    left: 0;
+}
+
+.rgb-strip.left {
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+}
+
+.rgb-strip.layer3 {
+    z-index: 3;
+    transform: translate(-10px,-10px);
+}
+
+.rgb-strip.layer4 {
+    z-index: 4;
+
+    transform: translate(-20px,-20px);
+}
+
+.display {
+    background: #000;
+    color: #0f0;
+    font-size: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    font-family: 'Press Start 2P', cursive; /* Pixelated font */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.keys {
+    display: grid;
+}
+.keys.grid-template {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+.keys.grid-templateADV {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+.key {
+    font-family: "Quantico", serif;
+    font-weight: 700;
+    font-style: normal;
+    background: #fff;
+    color: #000;
+    border : solid black 3px;
+    padding: 12px;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+
+.key.active {
+    background: #000;
+}
+.toggle-mode {
+  position: absolute;
+  font-size: 60px;
+  top: 3px;
+  right: 10px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.toggle-mode:hover {
+  color : #bbb;
+}
+
+
+.toggle-mode {
+  right: 10px;
+}
+
+
+.advanced .switch-functionality {
+  display: block; /* Show in advanced mode */
+}
+
+.grid-template, .grid-templateADV {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+@keyframes dance {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.dance {
+  animation: dance 0.5s ease-in-out;
+}
+.Credits
+{
+ color :white;
+position: absolute;
+bottom :10px;
+
+ font-size: 40px;
+}
